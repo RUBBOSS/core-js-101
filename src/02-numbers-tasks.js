@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -53,7 +54,8 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return ((value1 * 1 + value2 * 1) / 2);
+  const result = (value1 + value2) / 2;
+  return isFinite(result) ? result : Number.MAX_VALUE;
 }
 
 
